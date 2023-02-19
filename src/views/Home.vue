@@ -1,5 +1,11 @@
-<script setup>
-import Access from "../components/Access/Access.vue";
+<script>
+import Access from "@/components/Access/Access.vue"
+
+export default {
+  components: {
+    Access,
+  },
+}
 </script>
 
 <template>
@@ -19,12 +25,11 @@ import Access from "../components/Access/Access.vue";
   background-image: url("@/assets/images/homeBackground.png");
   display: flex;
   align-items: center;
+  justify-content: space-around;
   &__heading {
     font-size: 6vw;
     max-width: 40%;
-    padding: 1em;
     margin: 0;
-    justify-self: center;
     color: var(--white);
   }
 }
@@ -33,6 +38,12 @@ import Access from "../components/Access/Access.vue";
   .home {
     flex-direction: column;
     background-image: none;
+    justify-content: center;
+    &__heading {
+      font-size: 10vw;
+      padding-bottom: 10vw;
+      max-width: 100%;
+    }
   }
 }
 </style>

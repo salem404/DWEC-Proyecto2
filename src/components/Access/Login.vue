@@ -2,7 +2,12 @@
   <form>
     <div class="container">
       <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required />
+      <input
+        type="text"
+        placeholder="Enter Username"
+        name="username"
+        required
+      />
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required />
@@ -13,29 +18,37 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 45px 10px;
-  gap: 45px;
-  isolation: isolate;
+form {
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+
+    p {
+      margin: 0px;
+    }
+  }
   label {
-    font-size: 36px;
-    line-height: 44px;
+    color: var(--color);
+  }
+  input,
+  select {
+    font-size: 1rem;
+    padding: 5px;
   }
   button {
-    /* Submit */
-
-    width: 262px;
-    height: 65px;
-
-    /* Light/Blue Green */
-
     background: #0892b6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 35px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 6px 4px 0 rgba(0, 0, 0, 0.108);
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.108);
+      transform: translateY(2px);
+    }
   }
 }
 </style>

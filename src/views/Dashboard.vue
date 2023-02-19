@@ -1,8 +1,12 @@
-<script setup>
+<script>
 import ToDoList from "@/components/ToDoList.vue"
-import CropsList from "@/components/CropsList.vue"
+export default {
+  name: "Dashboard",
+  components: {
+    ToDoList,
+  },
+}
 </script>
 <template>
-  <CropsList />
   <ToDoList />
 </template>
