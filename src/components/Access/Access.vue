@@ -1,24 +1,3 @@
-<script>
-import Login from "@/components/Access/Login.vue"
-import Register from "@/components/Access/Register.vue"
-
-/**
- * @vue-data {boolean} [isLogged=true] - Estado del login del usuario
- * @vue-data {string} [selected=""] - Opción de acceso seleccionada
- */
-export default {
-  components: {
-    Login,
-    Register,
-  },
-  data() {
-    return {
-      isLogged: true,
-      selected: "",
-    }
-  },
-}
-</script>
 <template>
   <div v-if="isLogged" class="access">
     <div class="access__option">Welcome</div>
@@ -51,6 +30,27 @@ export default {
     </div>
   </div>
 </template>
+<script>
+import Login from "@/components/Access/Login.vue"
+import Register from "@/components/Access/Register.vue"
+
+/**
+ * @vue-data {boolean} [isLogged=true] - Estado del login del usuario
+ * @vue-data {string} [selected=""] - Opción de acceso seleccionada
+ */
+export default {
+  components: {
+    Login,
+    Register,
+  },
+  data() {
+    return {
+      isLogged: true,
+      selected: "",
+    }
+  },
+}
+</script>
 <style lang="scss">
 .access {
   max-width: 50%;

@@ -34,11 +34,13 @@ Tras descargar los módulos con `npm install`, en el directorio del proyecto pue
 
 ### Iniciar la aplicación
 
-Accesible en [el puerto 5173](http://localhost:3000)
+Accesible en [el puerto 5173](http://localhost:5173)
 
 ```bash
 npm run dev
 ```
+
+También necesitaremos el servidor corriendo en [el puerto 3001](http://localhost:3001).
 
 ### Preparar la aplicación para producción
 

@@ -20,7 +20,6 @@
     <p v-else>You made it!</p>
   </div>
 </template>
-
 <script>
 /**
  * @vue-data {Array} [tareas=[]] - Lista de tareas
