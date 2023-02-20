@@ -1,0 +1,20 @@
+{
+  "tareas": {
+    "Water mine lvl 40": {
+      "nombre": "Water mine lvl 40",
+      "done": true
+    },
+    "Make Macy's Gift": {
+      "nombre": "Make Macy's Gift",
+      "done": false
+    },
+    "Plant 40 carrots": {
+      "nombre": "Plant 40 carrots",
+      "done": true
+    },
+    "Craft 2 scarecrows": {
+      "nombre": "Craft 2 scarecrows",
+      "done": false
+    }
+  }
+}

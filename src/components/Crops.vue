@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <h2>Crops</h2>
-    <ul>
-      <li v-for="crop in crops">
-        <p v-if="crop.seasons.includes(season)">
-          {{ crop.name }}
-        </p>
+  <div class="crops">
+    <h2 class="crops__header">Crops</h2>
+    <ul class="crops__list" v-for="crop in crops">
+      <li class="crops__list-item" v-if="crop.seasons.includes(season)">
+        {{ crop.name }}
       </li>
     </ul>
   </div>
@@ -27,22 +25,46 @@ export default {
   data() {
     return {
       crops: [],
-    }
+    };
   },
   async mounted() {
-    await this.fetchCrops()
+    await this.fetchCrops();
   },
   methods: {
     async fetchCrops() {
       const response = await fetch("http://localhost:3001/api/crops", {
         method: "GET",
         headers: { Connection: "Keep-Alive" },
-      })
+      });
       if (response.ok) {
-        const data = await response.json()
-        this.crops = data
+        const data = await response.json();
+        this.crops = data;
       }
     },
   },
-}
+};
 </script>
+<style lang="scss">
+.crops {
+  background: var(--white);
+  border: 8px solid var(--dark-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  padding: 1em;
+  min-width: 130%;
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  &__header {
+    font-size: 2em;
+    margin: 0;
+    color: var(--black);
+    margin-bottom: 10px;
+  }
+  &__list {
+    list-style: circle;
+    padding-left: 2em;
+  }
+}
+</style>

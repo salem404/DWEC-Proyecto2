@@ -1,11 +1,11 @@
 <script>
-import Access from "@/components/Access/Access.vue"
+import Access from "@/components/Access/Access.vue";
 
 export default {
   components: {
     Access,
   },
-}
+};
 </script>
 
 <template>
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center center;

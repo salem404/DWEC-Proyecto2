@@ -11,18 +11,14 @@
 ## Índice
 
 - [Índice](#índice)
-- [Despliegue](#despliegue)
 - [Documentación](#documentación)
 - [Scripts disponibles](#scripts-disponibles)
   - [Iniciar la aplicación](#iniciar-la-aplicación)
+  - [Iniciar la API](#iniciar-la-api)
   - [Preparar la aplicación para producción](#preparar-la-aplicación-para-producción)
   - [Generar documentación](#generar-documentación)
 
 ---
-
-## Despliegue
-
-Aplicación desplegada a través de Netlify disponible [aquí](https://rick-and-morty-proyecto1.netlify.app/)
 
 ## Documentación
 
@@ -30,7 +26,7 @@ Esta aplicación cuenta con documentación gracias a JSDoc disponible [aquí](ht
 
 ## Scripts disponibles
 
-Tras descargar los módulos con `npm install`, en el directorio del proyecto puedes ejecutar comandos:
+Tras descargar los módulos con `npm install` en el directorio de la API y en el principal, puedes ejecutar comandos:
 
 ### Iniciar la aplicación
 
@@ -40,7 +36,14 @@ Accesible en [el puerto 5173](http://localhost:5173)
 npm run dev
 ```
 
-También necesitaremos el servidor corriendo en [el puerto 3001](http://localhost:3001).
+### Iniciar la API
+
+En el directorio de la API del proyecto:
+Accesible en [el puerto 3001](http://localhost:3001)
+
+```bash
+npm run dev
+```
 
 ### Preparar la aplicación para producción
 
