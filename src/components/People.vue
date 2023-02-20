@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     async fetchPeople() {
-      const response = await fetch("http://localhost:3001/api/people", {
+      const response = await fetch("https://proyectotema3api.onrender.com/api/people", {
         method: "GET",
         headers: { Connection: "Keep-Alive" },
       });

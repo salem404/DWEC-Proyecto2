@@ -152,7 +152,7 @@ export default {
   },
   methods: {
     async fetchTareas() {
-      const response = await fetch("http://localhost:3001/api/tareas", {
+      const response = await fetch("https://proyectotema3api.onrender.com/api/tareas", {
         method: "GET",
         headers: { Connection: "Keep-Alive" },
       });
@@ -170,13 +170,16 @@ export default {
         done: this.tareas[index].done,
       };
       console.log(tarea);
-      const response = await fetch(`http://localhost:3001/api/tareas/${tarea.nombre}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(tarea),
-      });
+      const response = await fetch(
+        `https://proyectotema3api.onrender.com/api/tareas/${tarea.nombre}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(tarea),
+        }
+      );
       const data = await response.json();
       this.tareas[index].editing = false;
     },
@@ -187,7 +190,7 @@ export default {
           nombre: this.newTarea,
           done: "false",
         };
-        const response = await fetch("http://localhost:3001/api/tareas", {
+        const response = await fetch("https://proyectotema3api.onrender.com/api/tareas", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -201,12 +204,15 @@ export default {
     },
     async deleteTarea(index) {
       const tarea = this.tareas[index];
-      const response = await fetch(`http://localhost:3001/api/tareas/${tarea.nombre}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://proyectotema3api.onrender.com/api/tareas/${tarea.nombre}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (response.ok) {
         this.fetchTareas();
       }

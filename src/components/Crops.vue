@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     async fetchCrops() {
-      const response = await fetch("http://localhost:3001/api/crops", {
+      const response = await fetch("https://proyectotema3api.onrender.com/api/crops", {
         method: "GET",
         headers: { Connection: "Keep-Alive" },
       });
