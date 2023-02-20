@@ -12,6 +12,7 @@
 
 - [Índice](#índice)
 - [Documentación](#documentación)
+- [Despliegue](#despliegue)
 - [Scripts disponibles](#scripts-disponibles)
   - [Iniciar la aplicación](#iniciar-la-aplicación)
   - [Preparar la aplicación para producción](#preparar-la-aplicación-para-producción)
@@ -22,6 +23,12 @@
 ## Documentación
 
 Esta aplicación cuenta con documentación gracias a JSDoc disponible [aquí](https://salem404.github.io/DWEC-Proyecto2)
+
+## Despliegue
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66e9e79f-2055-4632-ade3-ccbd40d120be/deploy-status)](https://app.netlify.com/sites/coral-companion-proyecto2/deploys)
+
+Aplicación desplegada con netlify disponible [aquí](https://coral-companion-proyecto2.netlify.app/)
 
 ## Scripts disponibles
 
